@@ -1,0 +1,25 @@
+// colors
+
+$c-primary: #98989F;
+$c-grey: #98989F;
+$c-black: #151515;
+$c-error: #F2453D;
+$c-success: #4CAF50;
+
+// fonts
+
+$title-font: 'Golos', sans-serif;
+$text-font: 'MuseoSansCyrl', sans-serif;
+$button-font: 'Inter', sans-serif;
+
+// utils
+
+$assetsPath: "/assets";
+// $assetsPath: '/themes/itome/assets';
+
+
+$defaultPixel: 16;
+
+@function em($pixel, $fontSize : $defaultPixel) {
+    @return calc($pixel / $fontSize) + em;
+}

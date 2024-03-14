@@ -1,0 +1,39 @@
+.advantages {
+    overflow: hidden;
+	
+    &__scroll {
+        margin-top: em(60);
+
+        width: 100%;
+
+        background: #EAEAEF;
+
+        @media(max-width: 1300px) {
+            display: none;
+        }
+    }
+
+    &__slider {
+        margin-top: em(60);
+
+        overflow: visible;
+
+        @media(max-width: 1300px) {
+            margin-top: em(40);
+            
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: em(20);
+    
+                transform: none !important;
+    
+                @media(max-width: 500px) {
+                    grid-template-columns: 100%;
+                    gap: em(16);
+                }
+            }
+        }
+
+    }
+}

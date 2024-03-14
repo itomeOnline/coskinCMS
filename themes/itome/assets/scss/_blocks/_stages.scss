@@ -1,0 +1,22 @@
+.stages {
+	
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+
+        margin-top: em(60);
+
+        border-radius: 24px;
+        border: 1px solid #EAEAEF;
+        background: #F9F9FC;
+
+        overflow: hidden;
+
+        @media(max-width: 1300px) {
+            border-radius: 20px;
+            grid-template-columns: 100%;
+            margin-top: em(40);
+        }
+    }
+}

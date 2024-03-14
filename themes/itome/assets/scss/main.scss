@@ -1,0 +1,256 @@
+@import "_includes/_reset";
+
+@import "_includes/_globals";
+
+@import "_includes/_fonts";
+
+@import "_includes/_bundle";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	@media(max-width: 500px) {
+		overflow-x: hidden;
+		position: relative;
+	}
+}
+
+body {
+	font-size: 1em;
+
+	opacity: 0;
+
+	transition: opacity 0s;
+
+	&.on-loaded {
+		transition: opacity .2s;
+
+		opacity: 1;
+	}
+
+	@media(max-width: 500px) {
+		overflow-x: hidden;
+		position: relative;
+	}
+}
+
+.content {
+	opacity: 0;
+
+	body.disabled & {
+		opacity: 1;
+	}
+}
+
+// scrollbar-width: none;
+// -webkit-scrollbar-width: none;
+
+// &::-webkit-scrollbar {
+// 	height: 0px;
+// 	width: 0px;
+// 	background: transparent;
+// }
+
+button,
+a {
+	transition: color .2s, background .2s; 
+}
+
+input,
+textarea {
+	-webkit-appearance: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+br.desktop {
+
+	@media(max-width: 500px) {
+		display: none;
+	}
+}
+
+br.middle {
+
+	@media(max-width: 1300px) {
+		display: none;
+	}
+}
+
+br.medium {
+	display: none;
+
+	@media(max-width: 1300px) {
+		display: initial;
+	}
+
+	@media(max-width: 500px) {
+		display: none;
+	}
+}
+
+br.mobile {
+	display: none;
+
+	@media(max-width: 500px) {
+		display: initial;
+	}
+}
+
+br.tablet {
+	display: none;
+
+	@media(max-width: 1300px) {
+		display: initial;
+	}
+}
+
+[data-lazy] {
+	opacity: 0;
+
+	transition: opacity .125s;
+
+	&.loaded {
+		opacity: 1;
+	}
+}
+
+[data-scroll-fadeup] {
+	transform: translate3d(0, 3rem, 0);
+	opacity: 0;
+
+	transition: transform .5s, opacity .5s;
+
+	will-change: transform, opacity;
+
+	&.is-inview {
+		transform: translate3d(0, 0 ,0);
+		opacity: 1;
+	}
+}
+
+
+[data-scroll-fadeup] .highlighted_text {
+	color: black;
+
+	transition: color .3s .15s;
+	
+}
+
+[data-scroll-fadeup].is-inview .highlighted_text {
+	color: #000;
+}
+
+[data-scroll-fadedown] {
+	transform: translate3d(0, -5rem, 0);
+	opacity: 0;
+
+	transition: transform .5s .25s, opacity .5s .25s;
+
+	will-change: transform, opacity;
+
+	&.is-inview {
+		transform: translate3d(0, 0 ,0);
+		opacity: 1;
+	}
+}
+
+
+
+@import "_blocks/container";
+
+@import "_blocks/input_wrapper";
+
+@import "_blocks/btn";
+
+@import "_blocks/multi_select";
+
+@import "_blocks/multi_option";
+
+@import "_blocks/section";
+
+@import "_blocks/section_block";
+
+@import "_blocks/privacy";
+
+@import "_blocks/modal";
+
+@import "_blocks/modals";
+
+@import "_blocks/modal_close";
+
+@import "_blocks/modal_form";
+
+@import "_blocks/modal_menu";
+
+@import "_blocks/itome";
+
+@import "_blocks/not_found";
+
+@import "_blocks/preloader";
+
+@import "_blocks/cookie";
+
+@import "_blocks/slider";
+
+@import "_blocks/slider_gallery";
+
+@import "_blocks/header";
+
+@import "_blocks/footer";
+
+@import "_blocks/home_table";
+
+@import "_blocks/home_button";
+
+@import "_blocks/home";
+
+@import "_blocks/advantages_card";
+
+@import "_blocks/advantages";
+
+@import "_blocks/discount_banner";
+
+@import "_blocks/text_section";
+
+@import "_blocks/equip_table_card";
+
+@import "_blocks/equip";
+
+@import "_blocks/contr";
+
+@import "_blocks/faq";
+
+@import "_blocks/faq_block";
+
+@import "_blocks/reviews_card";
+
+@import "_blocks/reviews";
+
+@import "_blocks/about_pics_slider";
+
+@import "_blocks/about";
+
+@import "_blocks/about_advan_slider";
+
+@import "_blocks/team_card";
+
+@import "_blocks/team";
+
+@import "_blocks/stages_card";
+
+@import "_blocks/stages";
+
+@import "_blocks/prices_tabs_block";
+
+@import "_blocks/prices";
+
+@import "_blocks/principle";

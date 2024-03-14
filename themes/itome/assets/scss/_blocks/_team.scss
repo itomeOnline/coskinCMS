@@ -1,0 +1,17 @@
+.team {
+    overflow: hidden;
+	
+    &__slider {
+        overflow: visible;
+
+        margin-top: em(60);
+
+        @media(max-width: 1300px) {
+            margin-top: em(40);
+        }
+    }
+
+    &__nav {
+        margin: em(28) auto 0;
+    }
+}

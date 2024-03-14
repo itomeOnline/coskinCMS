@@ -1,0 +1,143 @@
+.header {
+    background: #fff;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform .2s, opacity .2s;
+
+    border-bottom: 1px solid #E2E2E2;
+
+    [data-scroll-direction="down"] & {
+        transform: translate3d(0, -100%, 0);
+		opacity: 0;
+        pointer-events: none;
+	}
+
+	[data-scroll-direction="up"] & {
+        transform: translate3d(0, 0, 0);
+        pointer-events: all;
+        opacity: 1;
+	}
+	
+    &__line {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: em(12) 0;
+    }
+
+    &__logo {
+        display: block;
+
+        width: em(104);
+        height: em(24);
+
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+
+        margin-right: em(28);
+
+        @media(max-width: 1300px) {
+            display: none;
+        }
+    }
+
+    &__socials_link {
+        font-family: $title-font;
+        font-size: em(14);
+        line-height: em(18,14);
+        font-weight: 600;
+
+        transition: color .2s;
+
+        display: flex;
+        align-items: center;
+
+        width: fit-content;
+
+        &:hover {
+            // color: lighten($color: #000000, $amount: 25%);
+            color: $c-grey;
+
+            .icon {
+                // fill: lighten($color: #000000, $amount: 25%);
+                fill: $c-grey;
+            }
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
+
+            margin-right: .5rem;
+
+            transition: fill .2s;
+        }
+
+        & + & {
+            margin-left: 1.25rem;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        width: fit-content;
+
+        margin-right: .75rem;
+    }
+
+    &__menu {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+        border: 1px solid #E2E2E2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: none;
+
+        padding: 0;
+
+        background: #fff;
+
+        transition: background .2s, border .2s;
+
+        &:hover {
+            background: #000;
+            border: 1px solid #000;
+
+            .icon {
+                fill: #fff;
+            }
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+
+            fill: #000;
+
+            transition: fill .2s;
+        }
+    }
+}

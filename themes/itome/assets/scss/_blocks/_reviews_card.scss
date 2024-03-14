@@ -1,0 +1,90 @@
+.reviews_card {
+	border-radius: 24px;
+    border: 1px solid #EAEAEF;
+    background: #F9F9FC;
+
+    height: auto;
+    min-height: em(320);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: em(28);
+
+    @media(max-width: 1300px) {
+        min-height: em(300);
+        padding: em(20);
+        border-radius: 20px;
+    }
+
+    @media(max-width: 500px) {
+        min-height: em(340);
+    }
+
+    &__top {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        margin-bottom: em(20);
+
+        @media(max-width: 500px) {
+            margin-bottom: em(16);
+        }
+    }
+
+    &__name {
+        font-family: $title-font;
+        font-size: em(20);
+        line-height: em(24,20);
+        font-weight: 500;
+        color: #000;
+
+        @media(max-width: 500px) {
+            font-size: em(18);
+            line-height: em(22,18);
+        }
+    }
+
+    &__date {
+        font-family: $text-font;
+        font-size: em(14);
+        line-height: em(18,14);
+        font-weight: 500;
+        color: #98989F;
+
+        margin-top: .25rem;
+
+        @media(max-width: 500px) {
+            font-size: em(12);
+            line-height: em(16,12);
+        }
+
+        &--big {
+            margin-top: auto;
+            font-size: em(16);
+            line-height: em(20);
+
+            @media(max-width: 500px) {
+                font-size: em(14);
+                line-height: em(18,14);
+            }
+        }        
+    }
+
+    &__text {
+        font-family: $text-font;
+        font-size: em(16);
+        line-height: em(20,16);
+        font-weight: 500;
+        color: #000;
+
+        margin-top: em(12,16);
+
+        @media(max-width: 500px) {
+            font-size: em(14);
+            line-height: em(18,14);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.text_section {
+	
+    &__container {
+        padding-top: em(100);
+        padding-bottom: em(100);
+
+        @media(max-width: 1800px) {
+            padding-top: em(40);
+            padding-bottom: em(40);
+        }
+
+        @media(max-width: 1300px) {
+            padding-top: em(150);
+            padding-bottom: em(200);
+        }
+
+        @media(max-width: 500px) {
+            padding-top: em(70);
+            padding-bottom: em(70);
+        }
+
+        .section_block__title {
+            max-width: 85rem;
+
+            @media(max-width: 1300px) {
+                max-width: auto;
+            }
+        }
+    }
+}

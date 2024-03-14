@@ -1,0 +1,172 @@
+.modal_form {
+	position: absolute;
+
+	width: em(440);
+	height: fit-content;
+
+	margin-left: auto;
+
+	right: em(0);
+	top: em(12);
+	
+	padding: em(28);
+	border-radius: 24px;
+
+	//overflow: hidden;
+	background: white;
+	box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.08);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	
+	transform: translate3d(5em,0,0);
+	opacity: 0;
+
+	transition: transform .35s, opacity .35s;
+
+	@media(max-width: 500px) {
+		border-radius: 20px;
+		width: calc(100% - em(28));
+		right: em(14);
+		padding: em(20);
+	}
+
+	&__success {
+		align-items: center;
+	}
+
+
+	&.is-active {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+		pointer-events: all;
+
+		.modal_form__inputs.is-active {
+			pointer-events: all;
+		}
+	}
+
+	
+
+	// &.modal_offers {
+	// 	width: em(956); 
+
+	// 	@media(max-width: 500px) {
+	// 		width: 90vw;
+	// 		padding: em(24) em(24) em(20) em(24);
+	// 	}
+	// }
+
+	// &.modal_presentation {
+	// 	width: em(457);
+
+	// 	@media(max-width: 500px) {
+	// 		width: 90vw;
+	// 		padding: em(24) em(20) em(20) em(20);
+	// 	}
+	// }
+
+	&__form {
+		width: 100%;
+
+		&.on-request {
+			pointer-events: none;
+			opacity: .6;
+		}
+	}
+
+	&__close {
+		top: em(16);
+		right: em(16);
+		padding: 0;
+
+		@media(max-width: 500px) {
+			width: 32px !important;
+			height: 32px !important;
+			top: em(12);
+			right: em(12);
+		}
+
+		.icon {
+			width: 12px !important;
+			height: 12px !important;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		width: 100%;
+	}
+
+	&__icon {
+		width: em(200);
+		height: em(200);
+		margin-top: em(30);
+
+		background: #F4F4F4;
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.image {
+			width: em(100);
+			height: em(100);
+		}
+	}
+
+	&__title {
+		font-family: $title-font;
+		font-weight: 500;
+		font-size: em(28);
+		line-height: em(32,28);
+		color: #000;
+
+		@media(max-width: 500px) {
+			font-size: em(24);
+			line-height: em(28,24);
+		}
+	}
+
+	&__text {
+		font-family: $text-font;
+		font-size: em(16);
+		font-weight: 500;
+		line-height: em(20,16);
+		color: #68696C;
+		
+		margin-top: em(12,16);
+
+		@media(max-width: 500px) {
+			font-size: em(14);
+			line-height: em(18,14);
+
+			margin-top: em(10,14);
+		}
+	}
+
+	&__inputs {
+		margin-top: em(28);
+		width: 100%;
+
+		display: grid;
+		grid-template-columns: 100%;
+		gap: em(12);
+
+		@media(max-width: 500px) {
+			margin-top: em(20);
+			gap: em(10);
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		margin-top: 2rem;
+
+		@media(max-width: 500px) {
+			margin-top: 1.75rem;
+		}
+	}
+}

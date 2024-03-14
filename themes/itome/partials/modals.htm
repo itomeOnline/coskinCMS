@@ -1,0 +1,87 @@
+<div class="modals">
+  <div class="modal__overlay" id="commonModalOverlay"></div>
+  <div class="modal__container container">
+    <div class="modal_menu modal" data-modal="modal_menu">
+      <button class="modal_close modal_menu__close header__menu" data-modal-close>
+        <svg class="icon">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+      <div class="modal_menu__top"><a class="header__logo"><img class="image" data-src="/themes/itome/assets/img/logo_black.svg" alt="" data-lazy=""/></a></div>
+      <div class="modal_menu__content">
+        <p class="modal_menu__caption">Навигация</p><a class="modal_menu__link" href="#advantages" data-anchor="advantages" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> Преимущества </a><a class="modal_menu__link" href="#equipment" data-anchor="equipment" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> Оборудование</a><a class="modal_menu__link" href="#doctors" data-anchor="doctors" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> Врачи</a><a class="modal_menu__link" href="#about" data-anchor="about" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> О клинике</a><a class="modal_menu__link" href="#tariffs" data-anchor="tariffs" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> Тарифы</a><a class="modal_menu__link" href="#reviews" data-anchor="reviews" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> Отзывы</a><a class="modal_menu__link" href="#faq" data-anchor="faq" data-menu-link="">
+          <svg class="icon">
+            <use xlink:href="#arrow_right"></use>
+          </svg> FAQ</a>
+      </div>
+      <div class="modal_menu__bottom"> 
+        <div class="modal_menu__column"><a class="modal_menu__link_small" href="https://yandex.ru/maps/-/CDF6fSmg" target="_blank">Станюковича, 16 
+            <svg class="icon">
+              <use xlink:href="#arrow_diagon"></use>
+            </svg></a><a class="modal_menu__link_small" href="tel:8 (423) 202-90-08">8 (423) 202-90-08 
+            <svg class="icon">
+              <use xlink:href="#arrow_diagon"></use>
+            </svg></a></div>
+        <div class="modal_menu__column modal_menu__column--end"><a class="modal_menu__link_small" href="https://wa.me/message/DIAAF5CZVO7GL1" target="_blank">WhatsApp 
+            <svg class="icon">
+              <use xlink:href="#arrow_diagon"></use>
+            </svg></a><a class="modal_menu__link_small" href="https://t.me/CoskinRu" target="_blank">Telegram 
+            <svg class="icon">
+              <use xlink:href="#arrow_diagon"></use>
+            </svg></a><a class="modal_menu__link_small" href="https://www.instagram.com/coskin.clinic/" target="_blank">Instagram 
+            <svg class="icon">
+              <use xlink:href="#arrow_diagon"></use>
+            </svg></a></div>
+      </div>
+    </div>
+    <div class="modal_request modal_form modal" data-modal="modal_request" action="/mailer" data-mailer="">
+      <form class="modal_form__form" data-form-id="modal_request">
+        <input type="hidden" name="form" value="Записаться на прием">
+        <button class="modal_close modal_form__close header__menu" data-modal-close="">
+          <svg class="icon">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal_form__title">Записаться на прием</h3>
+        <p class="modal_form__text">В ближайшее время с вами свяжется менеджер <br class="desktop"> и поможет подобрать удобное время.</p>
+        <div class="modal_form__inputs">
+          <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+            <input class="input_wrapper__input" type="text" name="name" required autocomplete="off">
+            <label class="input_wrapper__label">Ваше имя</label>
+            <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+          </div>
+          <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+            <input class="input_wrapper__input" type="tel" name="phone" required autocomplete="off">
+            <label class="input_wrapper__label">Номер телефона</label>
+            <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+          </div>
+          <div class="input_wrapper input_wrapper--outlined" data-input-wrapper="">
+            <input class="input_wrapper__input" type="email" name="email" required autocomplete="off">
+            <label class="input_wrapper__label">Электронная почта</label>
+            <div class="input_wrapper__tooltip" data-input-tooltip=""></div>
+          </div>
+          <div class="modal_form__select" data-dropdown="" data-dropdown-name="connection_type" data-dropdown-placeholder="Способ связи" data-dropdown-readonly="true" data-dropdown-options="[{&quot;key&quot;:&quot;Телефон&quot;,&quot;value&quot;:&quot;Телефон&quot;},{&quot;key&quot;:&quot;WhatsApp&quot;,&quot;value&quot;:&quot;WhatsApp&quot;},{&quot;key&quot;:&quot;Telegram&quot;,&quot;value&quot;:&quot;Telegram&quot;},{&quot;key&quot;:&quot;Почта&quot;,&quot;value&quot;:&quot;Почта&quot;}]"></div>
+        </div>
+        <button class="modal_form__btn btn btn--filled"><span class="btn__text">Отправить</span></button>
+      </form>
+    </div>
+  </div>
+</div>

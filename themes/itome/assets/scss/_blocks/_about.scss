@@ -1,0 +1,24 @@
+.about {
+	overflow: hidden;
+    
+    &__wrap {
+        width: 100%;
+
+        margin-top: em(60);
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: em(24);
+
+        @media(max-width: 1300px) {
+            margin-top: em(40);
+            grid-template-columns: em(240) auto;
+            gap: em(20);
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: 100%;
+            gap: 2rem;
+        }
+    }
+}

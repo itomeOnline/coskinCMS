@@ -1,0 +1,17 @@
+.faq {
+	
+    &__content {
+        margin-top: em(60);
+
+        border-radius: 24px;
+        border: 1px solid #EAEAEF;
+        background: #FFF;
+
+        overflow: hidden;
+
+        @media(max-width: 1300px) {
+			margin-top: em(40);
+            border-radius: 20px;
+		}
+    }
+}

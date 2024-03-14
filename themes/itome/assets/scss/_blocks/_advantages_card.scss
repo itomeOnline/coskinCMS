@@ -1,0 +1,98 @@
+.advantages_card {
+	display: flex;
+    flex-direction: column;
+
+    border-radius: 24px;
+    overflow: hidden;
+
+    border: 1px solid #EAEAEF;
+    background: #F9F9FC;
+
+    height: auto;
+
+    @media(max-width: 1300px) {
+        width: 100% !important;
+
+        min-height: em(500);
+        height: auto;
+        flex: 1;
+
+        border-radius: 20px;
+    }
+
+    @media(max-width: 500px) {
+        min-height: auto;
+        height: fit-content;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+
+        min-height: em(426);
+
+        @media(max-width: 1300px) {
+            min-height: em(354);
+        }
+        
+        .image {
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        border-radius: 24px;
+
+        border: 1px solid #EAEAEF;
+        background: #FFF;
+        box-shadow: 0px -8px 40px 0px rgba(0, 0, 0, 0.06);
+
+        padding: em(28);
+
+        margin-top: em(-50);
+
+        flex: 1;
+
+        @media(max-width: 1800px) {
+            padding: em(24);
+        }
+
+        @media(max-width: 1300px) {
+            padding: em(20) em(16);
+            border-radius: 20px;
+
+            height: 100%;
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: em(24);
+        line-height: em(28,24);
+        font-weight: 500;
+        color: #000; 
+
+        @media(max-width: 1300px) {
+            font-size: em(20);
+            line-height: em(24,20);
+        }
+    }
+
+    &__text {
+        font-family: $text-font;
+        font-size: em(16);
+        font-weight: 500;
+        line-height: em(20,16);
+        color: #68696C;
+        letter-spacing: -0.02em;
+
+        margin-top: .75rem;
+
+        @media(max-width: 1300px) {
+            font-size: em(14);
+            line-height: em(18,14);
+
+            margin-top: .5rem;
+        }
+    }
+}

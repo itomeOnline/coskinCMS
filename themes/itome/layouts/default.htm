@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+		{% partial 'head' %}
+    <body>
+        {% partial 'svg'%}
+        {% partial 'preloader'%}
+        {% partial 'modals'%}
+        <div class="content">
+            {% partial 'header' %}
+            {% page %}
+            {% partial 'footer'%}
+        </div>
+        {% partial 'scripts' %}
+    </body>
+
+</html>

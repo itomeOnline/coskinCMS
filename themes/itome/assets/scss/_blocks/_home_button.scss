@@ -1,0 +1,120 @@
+.home_button {
+	border-radius: 16px;
+    background: #000;	
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: em(12) em(12) em(12) em(16);
+
+    transition: background .2s;
+
+    @media(max-width: 1300px) {
+        justify-content: center;
+    }
+
+    @media(max-width: 500px) {
+        justify-content: space-between;
+    }
+
+    &:hover {
+        background: #2E2E2E;
+    }
+
+    .equip & {
+        padding: .5rem;
+        padding-right: 1.5rem;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: 1300px) {
+            align-items: center;
+
+            @media(max-width: 1300px) {
+                align-items: flex-start;
+            }
+        }
+
+        .equip & {
+            margin-left: .75rem;
+        }
+    }
+
+    &__title {
+        font-family: $button-font;
+        font-size: em(16);
+        line-height: em(20);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #fff;
+
+        .equip & {
+            font-size: em(14);
+            line-height: 1.25rem;
+        }
+    }
+
+    &__text {
+        font-family: $button-font;
+        font-size: em(14);
+        line-height: em(18,14);
+        letter-spacing: -0.02em;
+        color: #B9B9B9;
+        font-weight: 500;
+
+        margin-top: 2px;
+
+        .equip & {
+            font-size: em(12);
+            line-height: 1rem;
+            margin-top: 0;
+        }
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 10px;
+        background: #2E2E2E;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+
+        @media(max-width: 1300px) {
+            display: none;
+
+            .equip & {
+                display: flex;
+            }
+        }
+
+        @media(max-width: 500px) {
+            display: flex;
+        }
+
+        .equip & {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+
+            fill: #fff;
+
+            .equip & {
+                width: 12px;
+                height: 16px;
+            }
+        }
+    }
+}
