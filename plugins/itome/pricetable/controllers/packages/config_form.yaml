@@ -1,0 +1,10 @@
+name: Packages
+form: $/itome/pricetable/models/packages/fields.yaml
+modelClass: Itome\Pricetable\Models\Packages
+defaultRedirect: itome/pricetable/packages
+create:
+    redirect: 'itome/pricetable/packages/update/:id'
+    redirectClose: itome/pricetable/packages
+update:
+    redirect: itome/pricetable/packages
+    redirectClose: itome/pricetable/packages

@@ -1,0 +1,30 @@
+columns:
+    name:
+        label: Название
+        type: text
+        searchable: true
+        sortable: true
+    time:
+        label: Время
+        type: text
+        searchable: true
+        sortable: true
+    price:
+        label: Стоимость
+        type: text
+        searchable: true
+        sortable: true
+    gender:
+        label: Пол
+        type: text
+        searchable: true
+        sortable: true
+        relation: gender
+        valueFrom: name
+    format:
+        label: Формат
+        type: text
+        searchable: true
+        sortable: true
+        relation: format
+        valueFrom: name

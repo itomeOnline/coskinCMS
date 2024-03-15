@@ -3,6 +3,29 @@ url = "/"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+use Itome\Pricetable\Models\Services as ServicesModel;
+use Itome\Pricetable\Models\Formats as FormatsModel;
+use Itome\Pricetable\Models\Genders as GendersModel;
+use Itome\Pricetable\Models\Packages as PackagesModel;
+
+function onStart() {
+    $services = ServicesModel::get();
+    $formats = FormatsModel::get();
+    $genders = GendersModel::get();
+    $packages = PackagesModel::get();
+    
+    $this['servicesTable'] = [
+        "services" => $services,
+        "formats" => $formats,
+        "genders" => $genders,
+        "packages" => $packages
+    ];
+    
+    //dd( $this['servicesTable']);    
+}
+?>
+==
 <main class="view" data-app-layout="view" data-app-layout-namespace="examples">
 <section class="section home" data-scroll-container>
   <div class="home__container container container--first" id="stick">
@@ -441,7 +464,7 @@ is_hidden = 0
     </div>
   </div>
 </section>
-<section class="section prices" id="tariffs" data-scroll-id="tariffs">
+<section class="section prices" id="tariffs" data-scroll-id="tariffs" data-services-table="" data-table-json='{{servicesTable|json_encode()}}'>
   <div class="prices__container container">
     <div class="section_block" id="stick11">
       <h2 class="section_block__title" data-scroll="" data-scroll-fadeup=""><span class="inner_text" data-scroll="" data-scroll-sticky data-scroll-target="#stick11" data-scroll-position="top" data-scroll-repeat="true" data-scroll-direction="vertical" data-scroll-class="pop_color">Стоимость процедур <br class="mobile"> и комплексов</span></h2>
@@ -451,63 +474,42 @@ is_hidden = 0
         <div class="prices_tabs_block" data-scroll="" data-scroll-fadeup="">
           <p class="prices_tabs_block__caption">Тип эпиляции</p>
           <div class="prices_tabs_block__slider">
-            <button class="prices_tabs_block__slider_btn is-active" data-tab-btn="1">Женская</button>
-            <button class="prices_tabs_block__slider_btn" data-tab-btn="2">Мужская</button>
+              {% for gender in servicesTable.genders %}
+                  <button class="prices_tabs_block__slider_btn" data-gender-btn="{{gender.id}}">{{gender.name}}</button>
+              {% endfor %}
           </div>
         </div>
         <div class="prices_tabs_block" data-scroll="" data-scroll-fadeup="">
           <p class="prices_tabs_block__caption">Формат</p>
           <div class="prices_tabs_block__slider">
-            <button class="prices_tabs_block__slider_btn is-active" data-tab-btn="1">Отдельные зоны</button>
-            <button class="prices_tabs_block__slider_btn" data-tab-btn="2">Комплексы</button>
+              {% for format in servicesTable.formats %}
+                  <button class="prices_tabs_block__slider_btn" data-format-btn="{{format.id}}">{{format.name}}</button>
+              {% endfor %}
           </div>
         </div>
       </div>
       <div class="prices_tabs_block" data-scroll="" data-scroll-fadeup="">
         <p class="prices_tabs_block__caption">Количество сеансов</p>
         <div class="prices_tabs_block__slider prices_tabs_block__slider--count">
-          <button class="prices_tabs_block__slider_btn prices_tabs_block__slider_btn--count is-active" data-tab-btn="1">Разовое посещение
-            <svg class="icon_check">
-              <use xlink:href="#check"></use>
-            </svg>
-          </button>
-          <button class="prices_tabs_block__slider_btn prices_tabs_block__slider_btn--count" data-tab-btn="2">Пакет 3 (-10%)
-            <svg class="icon_check">
-              <use xlink:href="#check"></use>
-            </svg>
-          </button>
-          <button class="prices_tabs_block__slider_btn prices_tabs_block__slider_btn--count" data-tab-btn="3">Пакет 5 (-15%)
-            <svg class="icon_check">
-              <use xlink:href="#check"></use>
-            </svg>
-          </button>
-          <button class="prices_tabs_block__slider_btn prices_tabs_block__slider_btn--count" data-tab-btn="4">Пакет 7 (-20%)
-            <svg class="icon_check">
-              <use xlink:href="#check"></use>
-            </svg>
-          </button>
+          {% for package in servicesTable.packages %}
+              <button class="prices_tabs_block__slider_btn prices_tabs_block__slider_btn--count" data-package-btn="{{package.id}}">{{package.name}} {% if package.discount_percentage > 0 %} (-{{package.discount_percentage}}%) {% endif %}
+                <svg class="icon_check">
+                  <use xlink:href="#check"></use>
+                </svg>
+              </button>
+          {% endfor %}
         </div>
       </div>
     </div>
-    <div class="prices__table" data-scroll="" data-scroll-fadeup="">
-      <div class="prices__line" data-scroll="" data-scroll-fadeup="">
-        <p class="prices__text">Верхняя губа</p>
-        <p class="prices__text prices__text--bold">15 минут</p>
-        <p class="prices__text prices__text--price prices__text--bold">1 300 ₽</p>
-        <button class="prices__text prices__text--grey">Записаться</button>
-      </div>
-      <div class="prices__line" data-scroll="" data-scroll-fadeup="">
-        <p class="prices__text">Щеки</p>
-        <p class="prices__text prices__text--bold">15 минут</p>
-        <p class="prices__text prices__text--price prices__text--bold">2 000 ₽</p>
-        <button class="prices__text prices__text--grey">Записаться</button>
-      </div>
-      <div class="prices__line" data-scroll="" data-scroll-fadeup="">
-        <p class="prices__text">Подбородок</p>
-        <p class="prices__text prices__text--bold">15 минут</p>
-        <p class="prices__text prices__text--price prices__text--bold">1 000 ₽</p>
-        <button class="prices__text prices__text--grey">Записаться</button>
-      </div>
+    <div class="prices__table" data-scroll="" data-scroll-fadeup="" data-table-wrapper="">
+        {% for service in servicesTable.services %}
+            <div class="prices__line" data-scroll="" data-scroll-fadeup="" style="display:none;">
+                <p class="prices__text">{{service.name}}</p>
+                <p class="prices__text prices__text--bold">{{service.time}}</p>
+                <p class="prices__text prices__text--price prices__text--bold">{{service.price|number_format(0, ' ', '')}} ₽</p>
+                <button class="prices__text prices__text--grey">Записаться</button>
+            </div>
+        {% endfor %}
     </div>
   </div>
 </section>

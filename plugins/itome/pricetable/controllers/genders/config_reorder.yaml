@@ -1,0 +1,4 @@
+title: Genders
+modelClass: Itome\Pricetable\Models\Genders
+toolbar:
+    buttons: reorder_toolbar

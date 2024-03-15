@@ -1,0 +1,28 @@
+plugin:
+    name: 'itome.pricetable::lang.plugin.name'
+    description: 'itome.pricetable::lang.plugin.description'
+    author: Itome
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Таблица услуг'
+        url: itome/pricetable/pricetable
+        icon: icon-table
+        sideMenu:
+            side-menu-item:
+                label: Услуги
+                url: itome/pricetable/pricetable
+                icon: icon-sitemap
+            side-menu-item2:
+                label: Пол
+                url: itome/pricetable/genders
+                icon: icon-genderless
+            side-menu-item3:
+                label: Форматы
+                url: itome/pricetable/formats
+                icon: icon-code-fork
+            side-menu-item4:
+                label: Пакеты
+                url: itome/pricetable/packages
+                icon: icon-dropbox

@@ -1,0 +1,32 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table itome_pricetable_services'
+    - builder_table_create_itome_pricetable_services.php
+1.0.3:
+    - 'Updated table itome_pricetable_services'
+    - builder_table_update_itome_pricetable_services.php
+1.0.4:
+    - 'Updated table itome_pricetable_services'
+    - builder_table_update_itome_pricetable_services_2.php
+1.0.5:
+    - 'Created table itome_pricetable_gender'
+    - builder_table_create_itome_pricetable_gender.php
+1.0.6:
+    - 'Updated table itome_pricetable_gender'
+    - builder_table_update_itome_pricetable_genders.php
+1.0.7:
+    - 'Created table itome_pricetable_formats'
+    - builder_table_create_itome_pricetable_formats.php
+1.0.8:
+    - 'Updated table itome_pricetable_formats'
+    - builder_table_update_itome_pricetable_formats.php
+1.0.9:
+    - 'Updated table itome_pricetable_genders'
+    - builder_table_update_itome_pricetable_genders_2.php
+1.0.10:
+    - 'Updated table itome_pricetable_services'
+    - builder_table_update_itome_pricetable_services_3.php
+1.0.11:
+    - 'Created table itome_pricetable_package'
+    - builder_table_create_itome_pricetable_package.php

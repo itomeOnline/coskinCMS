@@ -1,0 +1,12 @@
+fields:
+    name:
+        label: Название
+        span: auto
+        required: 1
+        type: text
+    discount_percentage:
+        label: 'Процент скидки'
+        span: auto
+        readOnly: 0
+        required: 1
+        type: number

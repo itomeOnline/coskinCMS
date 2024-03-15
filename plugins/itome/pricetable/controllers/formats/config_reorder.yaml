@@ -1,0 +1,4 @@
+title: Formats
+modelClass: Itome\Pricetable\Models\Formats
+toolbar:
+    buttons: reorder_toolbar

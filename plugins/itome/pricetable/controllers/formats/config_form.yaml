@@ -1,0 +1,10 @@
+name: Formats
+form: $/itome/pricetable/models/formats/fields.yaml
+modelClass: Itome\Pricetable\Models\Formats
+defaultRedirect: itome/pricetable/formats
+create:
+    redirect: 'itome/pricetable/formats/update/:id'
+    redirectClose: itome/pricetable/formats
+update:
+    redirect: itome/pricetable/formats
+    redirectClose: itome/pricetable/formats

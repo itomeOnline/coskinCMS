@@ -1,0 +1,4 @@
+title: PriceTable
+modelClass: Itome\Pricetable\Models\Services
+toolbar:
+    buttons: reorder_toolbar

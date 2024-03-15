@@ -1,0 +1,1 @@
+var app=function(){"use strict";return function(){document.querySelectorAll("[data-dropdown-block]").forEach((t=>{t.querySelector("[data-dropdown-btn]").addEventListener("click",(e=>{t.classList.toggle("is-open")}))}))}}();

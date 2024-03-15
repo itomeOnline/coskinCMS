@@ -1,0 +1,10 @@
+name: Genders
+form: $/itome/pricetable/models/genders/fields.yaml
+modelClass: Itome\Pricetable\Models\Genders
+defaultRedirect: itome/pricetable/genders
+create:
+    redirect: 'itome/pricetable/genders/update/:id'
+    redirectClose: itome/pricetable/genders
+update:
+    redirect: itome/pricetable/genders
+    redirectClose: itome/pricetable/genders

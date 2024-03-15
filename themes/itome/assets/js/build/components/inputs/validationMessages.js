@@ -1,0 +1,1 @@
+var app=function(){"use strict";return{valueMissing:{default:"Заполните поле"},typeMismatch:{email:"Проверьте адрес электронной почты",phone:"Укажите номер телефона"}}}();

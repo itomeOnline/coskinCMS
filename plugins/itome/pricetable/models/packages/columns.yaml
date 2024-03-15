@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: Название
+        type: text
+        searchable: true
+        sortable: true
+    discount_percentage:
+        label: 'Процент скидки'
+        type: number
+        searchable: true
+        sortable: true

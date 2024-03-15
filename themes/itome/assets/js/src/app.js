@@ -17,6 +17,7 @@ import aboutAdvanSlider from "./components/aboutAdvanSlider";
 import teamSlider from "./components/teamSlider";
 import showInfo from "./components/showInfo";
 import Dropdown from './components/dropdown';
+import { servicesTable } from "./components/servicesTable";
 
 setTimeout(() => { 
     document.querySelector('body').classList.add('on-loaded');
@@ -156,4 +157,6 @@ document.addEventListener("DOMContentLoaded", _ => {
         new Input(item, validationMessages);
     })
 
+
+    servicesTable().init()
 });

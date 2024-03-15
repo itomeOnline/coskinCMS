@@ -1,0 +1,10 @@
+name: PriceTable
+form: $/itome/pricetable/models/services/fields.yaml
+modelClass: Itome\Pricetable\Models\Services
+defaultRedirect: itome/pricetable/pricetable
+create:
+    redirect: 'itome/pricetable/pricetable/update/:id'
+    redirectClose: itome/pricetable/pricetable
+update:
+    redirect: itome/pricetable/pricetable
+    redirectClose: itome/pricetable/pricetable

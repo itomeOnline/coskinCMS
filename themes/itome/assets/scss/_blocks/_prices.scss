@@ -91,10 +91,18 @@
         }
 
         &--price {
-           
+            display: flex;
+            gap: 14px;
+
+
             @media(max-width: 1300px) {
                 margin-left: auto;
             }
+        }
+
+        &--defaultPrice {
+            color: gray;
+            text-decoration: line-through;
         }
 
         &--grey {

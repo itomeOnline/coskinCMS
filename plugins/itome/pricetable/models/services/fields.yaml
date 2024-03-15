@@ -1,0 +1,30 @@
+fields:
+    name:
+        label: Название
+        span: auto
+        required: 1
+        type: text
+    time:
+        label: Время
+        span: auto
+        required: 1
+        type: text
+    price:
+        label: Стоимость
+        span: auto
+        required: 1
+        type: number
+    gender:
+        label: Пол
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+    format:
+        label: Формат
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
