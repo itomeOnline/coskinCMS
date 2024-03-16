@@ -28,6 +28,9 @@ class Services extends Model
     public $rules = [
     ];
 
+    protected $fillable = ['name', 'time', 'price', 'gender_id', 'format_id'];
+   
+
     public $belongsTo = [
         'gender' => [
             "Itome\Pricetable\Models\Genders",

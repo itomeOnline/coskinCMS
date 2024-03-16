@@ -2,6 +2,8 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
+use Request;
+use Itome\Pricetable\Models\Services as ServicesModel;
 
 class PriceTable extends Controller
 {
@@ -15,5 +17,17 @@ class PriceTable extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('Itome.Pricetable', 'main-menu-item', 'side-menu-item1');
+    }
+
+    public function onDublicate() 
+    {
+        $duclicateIds = Request::input('checked');
+
+        foreach($duclicateIds as $id) {
+            $serice = ServicesModel::where('id', '=', $id)->first(['name', 'time', 'price', 'gender_id', 'format_id'])->toArray();
+
+
+            ServicesModel::create($serice);
+        }
     }
 }
